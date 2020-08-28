@@ -1,6 +1,6 @@
 ##### This is an edited version of the material-table in which only export as CSV option is present. Do not clone this if you want both options and regular updates.
 
-##### material-table is developed by [**Mehmet Baran**](https://github.com/mbrn) and below README belogs to the original project.
+##### material-table is developed by [**Mehmet Baran**](https://github.com/mbrn) and below README belongs to the original project [**material-table.com**](https://material-table.com/).
 
 > :warning: Please do not create pull requests that contains a lot of change. Because we are working on refactoring and testing. Just pull requests that fixes a bug with a few line changes.
 
