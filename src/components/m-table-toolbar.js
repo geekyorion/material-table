@@ -127,7 +127,7 @@ export class MTableToolbar extends React.Component {
           autoFocus={this.props.searchAutoFocus}
           className={
             this.props.searchFieldAlignment === "left" &&
-            this.props.showTitle === false
+              this.props.showTitle === false
               ? null
               : this.props.classes.searchField
           }
@@ -237,7 +237,7 @@ export class MTableToolbar extends React.Component {
           </span>
         )}
         {this.props.exportButton && (
-          <span>
+          <span onClick={this.exportCsv}>
             <Tooltip title={localization.exportTitle}>
               <IconButton
                 color="inherit"
@@ -251,22 +251,6 @@ export class MTableToolbar extends React.Component {
                 <this.props.icons.Export />
               </IconButton>
             </Tooltip>
-            <Menu
-              anchorEl={this.state.exportButtonAnchorEl}
-              open={Boolean(this.state.exportButtonAnchorEl)}
-              onClose={() => this.setState({ exportButtonAnchorEl: null })}
-            >
-              {(this.props.exportButton === true || this.props.exportButton.csv ) && (
-                <MenuItem key="export-csv" onClick={this.exportCsv}>
-                  {localization.exportCSVName}
-                </MenuItem>
-              )}
-              {(this.props.exportButton === true || this.props.exportButton.pdf ) && (
-                <MenuItem key="export-pdf" onClick={this.exportPdf}>
-                  {localization.exportPDFName}
-                </MenuItem>
-              )}
-            </Menu>
           </span>
         )}
         <span>
@@ -325,8 +309,8 @@ export class MTableToolbar extends React.Component {
           {title}
         </Typography>
       ) : (
-        title
-      );
+          title
+        );
 
     return <div className={classes.title}>{toolBarTitle}</div>;
   }
@@ -339,17 +323,17 @@ export class MTableToolbar extends React.Component {
     };
     const title =
       this.props.showTextRowsSelected &&
-      this.props.selectedRows &&
-      this.props.selectedRows.length > 0
+        this.props.selectedRows &&
+        this.props.selectedRows.length > 0
         ? typeof localization.nRowsSelected === "function"
           ? localization.nRowsSelected(this.props.selectedRows.length)
           : localization.nRowsSelected.replace(
-              "{0}",
-              this.props.selectedRows.length
-            )
+            "{0}",
+            this.props.selectedRows.length
+          )
         : this.props.showTitle
-        ? this.props.title
-        : null;
+          ? this.props.title
+          : null;
     return (
       <Toolbar
         className={classNames(classes.root, {
@@ -379,7 +363,7 @@ MTableToolbar.defaultProps = {
     nRowsSelected: "{0} row(s) selected",
     showColumnsTitle: "Show Columns",
     showColumnsAriaLabel: "Show Columns",
-    exportTitle: "Export",
+    exportTitle: "Export as CSV",
     exportAriaLabel: "Export",
     exportCSVName: "Export as CSV",
     exportPDFName: "Export as PDF",
@@ -439,13 +423,13 @@ export const styles = (theme) => ({
   highlight:
     theme.palette.type === "light"
       ? {
-          color: theme.palette.secondary.main,
-          backgroundColor: lighten(theme.palette.secondary.light, 0.85),
-        }
+        color: theme.palette.secondary.main,
+        backgroundColor: lighten(theme.palette.secondary.light, 0.85),
+      }
       : {
-          color: theme.palette.text.primary,
-          backgroundColor: theme.palette.secondary.dark,
-        },
+        color: theme.palette.text.primary,
+        backgroundColor: theme.palette.secondary.dark,
+      },
   spacer: {
     flex: "1 1 10%",
   },

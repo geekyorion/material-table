@@ -1,9 +1,11 @@
 {
-  "name": "material-table",
-  "version": "1.69.0",
+  "name": "material-table-csv",
+  "version": "1.0.0",
   "description": "Datatable for React based on https://material-ui.com/api/table/ with additional features",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
+  "author": "GeekyOrion",
+  "license": "MIT",
   "files": [
     "dist",
     "types"
@@ -27,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mbrn/material-table.git"
+    "url": "git+https://github.com/geekyorion/material-table-csv.git"
   },
   "keywords": [
     "react",
@@ -36,12 +38,6 @@
     "datatable",
     "table"
   ],
-  "author": "Mehmet Baran",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mbrn/material-table/issues"
-  },
-  "homepage": "https://github.com/mbrn/material-table#readme",
   "devDependencies": {
     "@babel/cli": "7.1.2",
     "@babel/core": "7.4.4",
